@@ -11,14 +11,18 @@ export class ByCountryComponent {
   constructor(private countryService:CountryService) { }
 
   term:string = '';
+  haveError: boolean = false;
 
 
   search() {
+    this.haveError = false;
     console.log(this.term);
 
     this.countryService.searchCountry(this.term)
-      .subscribe(resp => {
+      .subscribe((resp) => {
         console.log(resp);
+      }, (err) => {
+        this.haveError = true;
       });
   }
 

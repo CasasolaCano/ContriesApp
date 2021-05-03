@@ -12,11 +12,11 @@
 </div>
 <hr>
 
-<div class="alert alert-danger">
-    No se encontró nada con el término ABC
+<div *ngIf="haveError" class="alert alert-danger">
+    No se encontró nada con el termino {{term}}
 </div>
 
-<div class="row">
+<div *ngIf="!haveError" class="row">
     <div class="col">
 
         <table class="table table-hover">
