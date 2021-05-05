@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ByCapitalComponent } from './pages/by-capital/by-capital.component';
 import { ByCountryComponent } from './pages/by-country/by-country.component';
 import { ByRegionComponent } from './pages/by-region/by-region.component';
-import { SeeContryComponent } from './pages/see-contry/see-contry.component';
+import { SeeCountryComponent } from './pages/see-country/see-country.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,14 +14,17 @@ import { FormsModule } from '@angular/forms';
     ByCapitalComponent,
     ByCountryComponent,
     ByRegionComponent,
-    SeeContryComponent],
+    SeeCountryComponent
+  ],
   exports: [
     ByCapitalComponent,
     ByCountryComponent,
     ByRegionComponent,
-    SeeContryComponent],
+    SeeCountryComponent
+  ],
   imports: [
     CommonModule,
+    RouterModule,
     FormsModule
   ]
 })
