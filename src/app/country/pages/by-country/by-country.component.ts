@@ -31,4 +31,9 @@ export class ByCountryComponent {
       });
   }
 
+  suggestions(term: string) {
+    this.haveError = false;
+    //TODO: Crear sugerencias
+  }
+
 }
