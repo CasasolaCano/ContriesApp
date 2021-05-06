@@ -14,6 +14,7 @@ export class ByCountryComponent {
   term:string = '';
   haveError: boolean = false;
   countries: Country[] = [];
+  placeholder:string = 'Buscar pais...';
 
 
   search(term: string) {

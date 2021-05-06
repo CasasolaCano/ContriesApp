@@ -12,6 +12,7 @@ export class ByCapitalComponent implements OnInit {
   term:string = '';
   haveError:boolean = false;
   countries:Country[] = [];
+  placeholder:string = 'Buscar capital...'
 
   constructor(private countryService:CountryService) { }
 

@@ -4,17 +4,17 @@
 
 <div class="row">
     <div class="col">
-        <app-country-input (onEnter)="search($event)" (onDebounce)="suggestions()"></app-country-input>
+        <app-country-input (onEnter)="search($event)" (onDebounce)="suggestions()" placeholder="Buscar capital..."></app-country-input>
     </div>
 
 </div>
 <hr>
 
-<div *ngIf="haveError" class="alert alert-danger">
+<div *ngIf=" haveError " class="alert alert-danger ">
     No se encontró nada con el termino {{term}}
 </div>
 
-<div *ngIf="countries.length > 0" class="row">
+<div *ngIf="countries.length> 0" class="row">
     <div class="col">
 
         <app-country-table [countries]="countries"></app-country-table>
