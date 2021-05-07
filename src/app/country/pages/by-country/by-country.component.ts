@@ -32,7 +32,7 @@ export class ByCountryComponent {
       });
   }
 
-  suggestions(term: string) {
+  suggestions() {
     this.haveError = false;
     //TODO: Crear sugerencias
   }
