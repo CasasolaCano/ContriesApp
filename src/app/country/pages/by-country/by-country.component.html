@@ -4,10 +4,18 @@
 
 <div class="row">
     <div class="col">
-        <app-country-input (onEnter)="search($event)" (onDebounce)="suggestions()" placeholder="Buscar pais..."></app-country-input>
+        <app-country-input (onEnter)="search($event)" (onDebounce)="suggestions($event)" placeholder="Buscar pais..."></app-country-input>
     </div>
 
 </div>
+
+<ul class="list-group">
+    <li *ngFor="let country of suggestedCountries" class="list-group-item list-group-item-action">
+        <a class="nav-link" [routerLink]="['/country', country.alpha2Code]">
+            {{country.name}}
+        </a>
+    </li>
+</ul>
 <hr>
 
 <div *ngIf="haveError" class="alert alert-danger">

@@ -14,6 +14,9 @@ export class ByCountryComponent {
   term:string = '';
   haveError: boolean = false;
   countries: Country[] = [];
+
+  suggestedCountries: Country[] = [];
+
   placeholder:string = 'Buscar pais...';
 
 
@@ -32,8 +35,14 @@ export class ByCountryComponent {
       });
   }
 
-  suggestions() {
+  suggestions(term: string) {
     this.haveError = false;
+
+    this.countryService.searchCountry(term)
+      .subscribe( 
+        countries => this.suggestedCountries = countries.splice(0,3),
+        (err) => this.suggestedCountries = []
+      );
     //TODO: Crear sugerencias
   }
 
