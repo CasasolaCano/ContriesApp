@@ -27,6 +27,7 @@ export class ByRegionComponent {
 
   search() {
 
+
     this.countryService.searchCountriesByRegion(this.activeRegion)
       .subscribe((resp) => {
         this.countries = resp;
